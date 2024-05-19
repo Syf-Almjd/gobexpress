@@ -1,4 +1,4 @@
-package com.example.gobexpress
+package com.gob.gobexpress
 
 import io.flutter.embedding.android.FlutterActivity
 

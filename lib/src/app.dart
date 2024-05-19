@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:gobexpress/src/Config/AppConstants.dart';
-import 'package:gobexpress/src/presentation/NoInternet/noInternetPage.dart';
 import 'package:gobexpress/src/presentation/WebView/MyHomePage.dart';
 import 'package:internet_connection_checker_plus/internet_connection_checker_plus.dart';
 
@@ -37,13 +36,13 @@ class MyAppState extends State<MyApp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: AppConstants.title,
-      home: Scaffold(
-        body: Visibility(
-          visible: isConnected,
-          replacement: const NoInternetPage(),
-          child: const MyHomePage(),
-        ),
-      ),
+      home: Scaffold(body: MyHomePage()
+          // Visibility(
+          //   visible: isConnected,
+          //   replacement: const NoInternetPage(),
+          //   child: const MyHomePage(),
+          // ),
+          ),
     );
   }
 }
